@@ -170,7 +170,7 @@ c.LocalAuthenticator.create_system_users = True
 <% if $jupyterhub::cfhproxy_debug { -%>
 c.ConfigurableHTTPProxy.debug = True
 <% } -%>
-<% if $jupyterhub::cfhproxy_should_start == False { -%>
+<% if $jupyterhub::cfhproxy_should_start == false { -%>
 c.ConfigurableHTTPProxy.should_start =  False
 c.ConfigurableHTTPProxy.command = <%= $jupyterhub::cfhproxy_command %>
 c.ConfigurableHTTPProxy.auth_token = '<%= $jupyterhub::cfhproxy_auth_token %>'
